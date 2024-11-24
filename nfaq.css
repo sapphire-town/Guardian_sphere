@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:lightblue;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:beige;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure border-radius is applied correctly */
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.question {
+    color: black;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.answer {
+    color: brown;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Style for FAQ section title */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Style for individual question */
+.question {
+    font-weight: bold;
+}
+
+/* Style for answer */
+.answer {
+    margin-top: 10px;
+}
+
+/* Hover effect */
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Border radius for the last FAQ item */
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+/* Custom scrollbar */
+.faq-container {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #eee;
+    overflow-y: auto;
+}
+
+.faq-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.faq-container::-webkit-scrollbar-track {
+    background: #eee;
+}
+
+.faq-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+    <link href="Login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">LOGIN</h1>
+            <fieldset>
+                <legend></legend>
+                <br>
+                <br>
+                
+                <form action="open_profile.php" method="post">
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <br>
+                            <br>
+                            <br>
+                            <label><input type="email" name="email" placeholder="email"></label>
+                        </div>
+                        <br>
+                        
+                        <!---
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <label><input type="password" name="Password" placeholder="password"></label>
+                        </div>  -->
+                        <div class="input-field">
+                            <i class="fa-solid fa-lock"></i>
+                            <label><input type="tel" name="Contact" placeholder="Contact"></label>
+                        </div>
+                        <pre><p>     Forgot password? <a href="#">Click Here!</a></p></pre>
+                    </div>
+                
+                    <label><input type="checkbox" name="terms"> I agree to terms and conditions</label>
+                    <p></p>
+                    <br>
+                    <button type="submit" id="signinBtn" class="disable">Login</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+
+    <script>
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function() {
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Login";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function() {
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+    </script>
+</body>
+</html>

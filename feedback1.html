@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardian Sphere Feedback Form</title>
+<style>
+  body {
+    background-color: #f0f8ff; /* Light Blue Background */
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  h1 {
+    text-align: center;
+  }
+  form {
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input[type="radio"],
+  textarea {
+    display: none;
+  }
+  .rating {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .rating label {
+    color: #f2ad18;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #fcd900;
+  }
+  .rating input:checked ~ label,
+  .rating input:checked ~ label:hover ~ label {
+    color: #fcd900;
+  }
+  .feedback-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Guardian Sphere Feedback Form</h1>
+  <form action="#" method="post">
+    <label for="rating">1. How would you rate the overall concept of Guardian Sphere?</label>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5">
+      <label for="star5">☆</label>
+      <input type="radio" id="star4" name="rating" value="4">
+      <label for="star4">☆</label>
+      <input type="radio" id="star3" name="rating" value="3">
+      <label for="star3">☆</label>
+      <input type="radio" id="star2" name="rating" value="2">
+      <label for="star2">☆</label>
+      <input type="radio" id="star1" name="rating" value="1">
+      <label for="star1">☆</label>
+    </div>
+
+    <label for="presentation">2. Did you find the presentation about Guardian Sphere engaging and informative?</label>
+    <div class="rating">
+      <input type="radio" id="yes" name="presentation" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="presentation" value="no">
+      <label for="no">No</label>
+    </div>
+
+    <label for="impressed">3. Which aspect of Guardian Sphere impressed you the most?</label>
+    <input type="checkbox" name="impressed" value="user_empowerment"> User Empowerment
+    <input type="checkbox" name="impressed" value="location_tracking"> Real-time Location Tracking
+    <input type="checkbox" name="impressed" value="communication_services"> Direct Communication with Emergency Services
+    <input type="checkbox" name="impressed" value="personalized_plans"> Personalized Emergency Plans
+    <input type="checkbox" name="impressed" value="other"> Other (Please specify):
+
+    <label for="recommend">4. How likely are you to recommend Guardian Sphere to others?</label>
+    <select name="recommend">
+      <option value="very_likely">Very Likely</option>
+      <option value="likely">Likely</option>
+      <option value="neutral">Neutral</option>
+      <option value="unlikely">Unlikely</option>
+      <option value="very_unlikely">Very Unlikely</option>
+    </select>
+
+    <label for="feedback">5. Suggestions or feedback for improving Guardian Sphere:</label>
+    <textarea class="feedback-input" name="feedback" rows="4" cols="50"></textarea>
+
+    <label for="updates">6. Interested in learning more about Guardian Sphere updates?</label>
+    <div class="rating">
+      <input type="radio" id="yes_update" name="updates" value="yes">
+      <label for="yes_update">Yes, please keep me updated.</label>
+      <input type="radio" id="no_update" name="updates" value="no">
+      <label for="no_update">No, I'm not interested.</label>
+    </div>
+
+    <input type="submit" value="Submit Feedback">
+  </form>
+</div>
+</body>
+</html>

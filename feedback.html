@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Feedback</title>
+<link rel="stylesheet" href="FS.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 600px;
+        height: 500px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+    .rating > input {
+        display: none;
+    }
+    .rating > label {
+        display: inline-block;
+        padding: 5px;
+        font-size: 24px;
+        color: #ccc;
+        cursor: pointer;
+    }
+    .rating > input:checked ~ label,
+    .rating:not(:checked) > label:hover,
+    .rating:not(:checked) > label:hover ~ label {
+        color: #ffdb58;
+    }
+    .submit-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+    /* Center-align the textarea */
+    textarea {
+        display: block;
+        margin: 0 auto;
+    }
+    .body{
+        background-color: #ccc;
+        background-image: none;
+    }
+</style>
+</head>
+<body>
+    <header>     
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="file:///Users/atiahabib/Downloads/final/fs.html#FS.html" class="home-active">Home</a></li>
+            
+            <li><a href="2.html">Navigation</a></li>
+            
+            <li><a href="#about"class="about-text">About us</a></li>
+            <li><a href="#footer_container">Contact us</a></li>
+            <li><a href="sign_up_page.html">Sign Up</a></li>
+            <li><a href="faqq.html">FAQs</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+
+        <div class="profile" >
+            <i class="fa-solid fa-user" style="padding-left:20px"></i>
+            <span>&nbsp;<a href="http://localhost/final_project/login_first.html">Profile</a></span>
+            <i class='bx bx-caret-down' ></i>
+        </div>
+    </header>
+<div class="container" style="background-image: none; height: 100px;">
+    <h2>Service Feedback</h2>
+    <br>
+    <form id="feedbackForm">
+        <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">☆</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">☆</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">☆</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">☆</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">☆</label>
+        </div>
+        <textarea id="feedback" name="feedback" rows="10" placeholder="Enter your feedback"></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+
+
+</body>
+</html>
